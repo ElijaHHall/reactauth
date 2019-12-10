@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import PrivateRoute  from './PrivateRoute';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Admin from './pages/Admin';
 import { AuthContext } from "./context/auth";
@@ -23,6 +25,8 @@ function App(props){
               </ul>
           
               <Route exact path="/" component= { Home } />
+              <Route path="/login" component= { Login } />
+              <Route path="/signup" component= { Signup } />
               <PrivateRoute path="/admin" component= { Admin } />
 
         </div>
