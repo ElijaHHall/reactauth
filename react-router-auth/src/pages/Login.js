@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import logoImg from "../img/logo.png";
@@ -16,7 +16,7 @@ function postLogin() {
     axios.post("https://wwww.somePlace.com/auth/login", {
         userName,
         password
-    }).then(resule => {
+    }).then(result => {
         if (result.status === 200) {
             setAuthTokens(result.data);
             setLoggedIn(true);
